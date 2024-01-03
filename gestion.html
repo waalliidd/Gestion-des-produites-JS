@@ -1,16 +1,60 @@
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcket</title>
+    <link rel="stylesheet" href="gestion.css">
+    <title>Shop</title>
+
 </head>
 <body>
     <div class="shop">
+        <div class="head">
         <h1>Shop</h1>
         <p>Product Management Systems</p>
-    </div>
-    <div class="head"></div>
+         </div>
+        <div class="input">
+            <button id="submit">Create</button>
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+                <input type="number" id="count" placeholder="Count">
+                <input type="text" id="category" placeholder="Category">
+                
+        </div>
+    <div class="output">
+        <div id="searchBlock">
+            <input type="text" id="searche" placeholder="search...">
+            <div class="btnSearch">
+                <button id="searchTitle">Search By Title</button>
+                <button id="searchCategory">Search By Category</button>
+            </div>
+        </div>
+   
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>discount</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </table>
+        <tbody id="tbody">
+            
 
+        </tbody> 
+    </div>
+    </div>
     
+    <script src="gestion.js"></script>
 </body>
 </html>
